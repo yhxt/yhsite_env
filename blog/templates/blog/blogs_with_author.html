@@ -1,0 +1,7 @@
+{% extends 'blog/blog_list.html' %}
+
+{% block title %}{{ blog_author.username }}{% endblock %}
+{% block blog_list_title%}
+    作者：<b>{{ blog_author.username }}</b>(总共有{{blogs_nums}}篇博客)
+    <a href='{% url 'blog_list' %}'>查看全部作者博客</a>
+{% endblock %}
